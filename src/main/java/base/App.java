@@ -41,7 +41,7 @@ public class App {
     }
 
     private String readInput() {
-        System.out.println("What is the input string? ");
+        System.out.print("What is the input string? ");
         String name = in.nextLine();
         return name;
     }
