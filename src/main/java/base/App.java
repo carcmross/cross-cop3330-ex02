@@ -27,14 +27,26 @@ import java.util.Scanner;
 */
 
 public class App {
+    Scanner in = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        App myApp = new App();
+        String name = myApp.readInput();
+        String outputString = myApp.generateOutputString(name);
+        myApp.printOutput(outputString);
+    }
 
-        System.out.print("What is the input string? ");
-        String name = in.nextLine();
-
-        String outputString = name + " has " + name.length() + " characters.";
-
+    private void printOutput(String outputString) {
         System.out.println(outputString);
+    }
+
+    private String readInput() {
+        System.out.println("What is the input string? ");
+        String name = in.nextLine();
+        return name;
+    }
+
+    private String generateOutputString(String name) {
+        return name + " has " + name.length() + " characters.";
     }
 }
