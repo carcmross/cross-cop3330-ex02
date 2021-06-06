@@ -27,7 +27,7 @@ import java.util.Scanner;
 */
 
 public class App {
-    Scanner in = new Scanner(System.in);
+    static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
         App myApp = new App();
